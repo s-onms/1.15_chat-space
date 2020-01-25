@@ -1,0 +1,48 @@
+-# 1/21  hamlファイルを作成しよう
+-# 試し書き メインチャット→チェック済
+
+ -# ↓1/23ここより下でこのまま書いたら表示出来た
+-# fffffff
+
+.main_chat_3
+ .main_chat__main-header_5
+  .main_chat__main-header__leftbox_14_0
+   %h2.main_chat__main-header__current-group_14
+    テストグループ
+   %ul.main_chat__main-header__member-list_15
+    Member
+    .main_chat__main-header__member-lists
+     %li.main_chat__main-header__member-first_16
+      matsui
+     %li.main_chat__main-header__member-second_17
+      nakata
+     %li.main_chat__main-header__member-third_18
+      honda
+  .main_chat__main-header__edit-btn_19
+   = link_to '#' do
+    Edit
+ .message-contents_7
+  .message-contents__space_27
+   .message-contents__messages_28
+    #ul.message-contents__message-sender_29
+     松井　
+     #li.message-contents__message-date_30
+      2020/1/23(木)　
+     #li.message-contents__message-time_31
+      20:00:00
+   %h4.message-contents__message-writing_32
+    実装中です。
+
+ 
+ .post_1
+  .post__new-message_2
+   .post__new-message__input-box_3
+   
+    %input{:type => "text", :placeholder => "send",class:'box'}
+    
+    %label.post__mask__image= icon('fa','image',class: 'icon')
+     
+    %input.hidden{type: 'file'}
+   
+   %input.post__submit{type: 'submit', value: 'Send'}
+ 

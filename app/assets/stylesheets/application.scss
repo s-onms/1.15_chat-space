@@ -1,0 +1,19 @@
+// 1/21 拡張子をscssに変更
+// 下記追記（YUI 3のリセットファイルを使用）
+@import "./reset";
+
+// ▲1/21 _messages.scssが読み込まれるよう設定
+@import "./messages";
+
+// 1/21 FontAwesomeを導入
+@import "font-awesome-sprockets";
+@import "./font-awesome";
+
+
+// 1/23 ここは紐付けの場所
+
+@import "side_bar_2";
+@import "main_chat_3";
+@import "side_main_6";
+@import "message_contents_7";
+@import "post_8";

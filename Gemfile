@@ -51,3 +51,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'haml-rails'
+
+#1/21 FontAwesomeを導入。文字を扱うのと同じようにアイコンを表示
+ gem 'font-awesome-sass'
+

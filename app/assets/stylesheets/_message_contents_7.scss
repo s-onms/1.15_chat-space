@@ -1,0 +1,32 @@
+.message-contents_7 {
+ background-color: #FAFAFA;
+ height: calc(100vh - 190px);
+}
+
+.message-contents__space_27{
+ margin-left: 40px;
+}
+.message-contents__messages_28{
+ display: flex;
+ justify-content: flex-start;
+ 
+}
+.message-contents__message-sender_29 {
+ font-size: 12px;
+ color: #424A53;
+ margin:35px 0 12px ;
+ list-style: none;
+ display: flex;
+ justify-content: space-around;
+}
+.li.message-contents__message-date_30{
+ color: #424A53;
+ font-size: 12px;
+ margin:35px 0 12px ;
+ 
+}
+.message-contents__message-writing_32{
+ color: #424A53;
+ font-size: 14px;
+ margin: 0  0 46px 40px ;     
+}
