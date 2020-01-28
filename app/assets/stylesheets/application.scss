@@ -1,19 +1,34 @@
 // 1/21 拡張子をscssに変更
 // 下記追記（YUI 3のリセットファイルを使用）
 @import "./reset";
+@import "config/colors";
+// 1/28_訳あって先に読ませてもらいます
 
-// ▲1/21 _messages.scssが読み込まれるよう設定
 @import "./messages";
+// ▲1/21 _messages.scssが読み込まれるよう設定
 
-// 1/21 FontAwesomeを導入
 @import "font-awesome-sprockets";
 @import "./font-awesome";
-
-
-// 1/23 ここは紐付けの場所
+// 1/21 FontAwesomeを導入
 
 @import "side_bar_2";
 @import "main_chat_3";
 @import "side_main_6";
 @import "message_contents_7";
-@import "post_8";
+@import "post_1";
+// 1/23 ここは紐付けの場所
+
+// deviese用のスタイリング
+// 1/26 deviseのビューファイルの設定
+// @import "modules/user"; 記載したらエラーになった
+
+@import "user";
+// 1/28要は紐付けたいscssのファイル名を書くってこと
+// 今回はダウンロードしたchatspace-materialsフォルダ内にusersフォルダがあって、その中に「user.scss」ファイルがあるのでこれ！
+
+@import "modules/flash";
+// 1/28_「通知用」のメッセージと「アラート用」メッセージ紐付け
+// 読み込みの順番注意 先に読めておく必要がある@import "config/colors";はリセットCSSの次へ！
+
+ 
+

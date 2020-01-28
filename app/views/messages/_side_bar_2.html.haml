@@ -4,18 +4,19 @@
 -# ssssssssss
 -# ↑1/23普通に書くだけで表示された
 
+
 .side-bar_2
  .side-bar__header_4
   .side-bar__header-box_9
    .side-bar__header-box__name_10
-    MASA
+    = current_user.name
    %ul.header--box__button-list_11
     %li.header--box__button-new_12
      = link_to '#' do
       = icon('fa', 'edit',class: 'icon',)
     %li.header--box__button-edit_13
-     = link_to '#' do
-      = icon('fa', 'cog',class: 'icon')
+     = link_to edit_user_path(current_user) do
+      = icon('fas', 'cog', class: 'icon')
  .side-main_6
   .side-main__group_24
    %h2.side-main__group-name_25

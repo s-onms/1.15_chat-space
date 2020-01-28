@@ -1,0 +1,14 @@
+.notification {
+ .notice {
+   background-color: $light_blue;
+   color: $white;
+   text-align: center;
+ }
+
+ .alert {
+   background-color: $alert_orange;
+   color: $white;
+   text-align: center;
+ }
+}
+ // 1/28_「通知用」のメッセージと「アラート用」メッセージでスタイルを分る
