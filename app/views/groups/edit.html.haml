@@ -1,0 +1,12 @@
+-# = form_for @group do |f|
+-#   = f.text_field :name, class: "chat-group-form__input", placeholder: "グループ名を入力してください"
+-#   = f.collection_check_boxes :user_ids, User.all, :id, :name
+-#   = f.submit "Save", class: "chat-group-form__action-btn"
+  -# 1/29_記載 グループの編集機能を実装課程 現状ではform_withに変わっている事を留意
+
+  1/29 ↑全部削除_form.html.hamlに移動したから
+
+.chat-group-form
+  %h1 チャットグループ編集
+  = render partial: 'form', locals: { group: @group }
+  -# 1/29_newとeditからは、ほとんど_formを呼び出すだけ
