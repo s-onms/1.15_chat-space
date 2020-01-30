@@ -40,9 +40,21 @@
    
     %input{:type => "text", :placeholder => "send",class:'box'}
     
-    %label.post__mask__image= icon('fa','image',class: 'icon')
+    %label.post__mask__image= icon('fas','image',class: 'icon')
      
     %input.hidden{type: 'file'}
    
    %input.post__submit{type: 'submit', value: 'Send'}
  
+  -# 1/30下記に変更必要
+  -# .form
+  -#     = form_for [@group, @message] do |f|
+  -#       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+  -#       .form__mask
+  -#         = f.label :image, class: 'form__mask__image' do
+  -#           = icon('fas', 'image', class: 'icon')
+  -#           = f.file_field :image, class: 'hidden'
+  -#       = f.submit 'Send', class: 'form__submit'
+
+.messages
+  = render @messages

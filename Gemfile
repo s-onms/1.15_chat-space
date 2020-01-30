@@ -54,9 +54,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
 
+gem 'font-awesome-sass'
 #1/21 FontAwesomeを導入。文字を扱うのと同じようにアイコンを表示
- gem 'font-awesome-sass'
 
+gem 'devise'
  # 1/26 ユーザー管理機能実装時に作成
- gem 'devise'
 
+gem 'carrierwave'
+gem 'mini_magick'
+ # 1/30_Carrierwaveを導入
