@@ -9,6 +9,5 @@ class User < ApplicationRecord
   # 1/29_アソシエーションを設定(userファイル側で記載)
 
   has_many :messages
-  # 1/30_アソシエーションを設定(userファイル側で記載)
-  # userからはメッセージ多数ですよって事
+  # 1/31 送信機能実装時
 end

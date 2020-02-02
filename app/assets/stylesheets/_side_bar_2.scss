@@ -2,13 +2,12 @@
 .wrapper_1 {
  display: flex;
  height: 100vh;
-
 }
-.side_bar_2{
- width : 100％ ;
+.side-bar_2{
+ width : 300px ;
  // 300px
  background-color: #2F3E51;
- display: flex;
+ // display: flex;
 }
 .side-bar__header_4 {
  background-color :#243041;
@@ -17,7 +16,6 @@
  padding-right: 20px;
  padding-left:20px ;
  line-height: 100px;
- 
 }
 .side-bar__header-box_9{
  background-color :#243041;
@@ -26,19 +24,16 @@
  font-weight: bold;
  display: flex;
  justify-content: space-between;
-
 }
 .side-bar__header-box__name_10{                                 
  color: #eeeeee;
  font-size: 16px;
 }
-
 .header--box__button-list_11{
  list-style: none ;
  display: flex;
  /* newとeditを横並びにする（親要素のリストで） */
 }
-
 .header--box__button-new_12{
  margin-right: 5px;
  // ↓元々aタグにあった
@@ -52,23 +47,28 @@
  color: #eeeeee;
  }
 }
+.side-main__group_6{
+ height: calc(100vh - 100px);
+ background-color: #2f3e51;
+ padding: 20px 20px 0;
+ overflow: scroll;
+}
+.group_24 {
+ background-color: #2F3E51;
+ // height: calc(100vh - 100px);
+ margin-bottom: 40px;
+}
+.group__name_25{
+ margin:20px 20px 5px 20px;
+ font-size: 15px;
+ color: #ffffff;
+ margin: 0;
+}
+.group__message_26{
+ font-size: 11px;
+ color: #ffffff;
+ display: flex;
+ list-style: none;
+ margin : 0 0 40px;
+}
 
-
- .side-main_6 {
-  background-color: #2F3E51;
-  height: calc(100vh - 100px);
- }
-
- .group__name_25{
-  margin:20px 20px 5px 20px;
-  font-size: 15px;
-  color: #ffffff;
- }
-
- .group__message_26{
-  font-size: 11px;
-  color: #ffffff;
-  display: flex;
-  list-style: none;
-  margin : 0 20px 40px 20px ;
- }

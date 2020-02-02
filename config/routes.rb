@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get 'messages/index
   # 上の行は削除する
 
-  root "messages#index"
+  # root "messages#index"
   # 1/21 ルートパスへのアクセスがあったら、messages_controllerのindexアクションが呼び出されるようにする
 
   root 'groups#index'
@@ -25,9 +25,13 @@ Rails.application.routes.draw do
    # メッセージの保存を行う:create
   end
 
- 
-
-
+  resources :groups, only: [:new, :create, :edit, :update] do
+   # ？なぜ↑のindexが要らなくなったのか？
+   resources :messages, only: [:index, :create]
+   # 1/31 追記 送信機能実装 
+   # 投稿されたメッセージの一覧表示 & メッセージの入力ができる:index
+   # メッセージの保存を行う:create
+ end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

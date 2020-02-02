@@ -1,32 +1,35 @@
-.message-contents_7 {
+.message {
  background-color: #FAFAFA;
  height: calc(100vh - 190px);
+ padding: 46px 40px ;
 }
 
-.message-contents__space_27{
- margin-left: 40px;
-}
-.message-contents__messages_28{
+// .message-contents__space_27{
+//  margin-left: 40px;
+// }
+.upper-message_28{
  display: flex;
  justify-content: flex-start;
- 
+ margin-bottom: 10px;
 }
-.message-contents__message-sender_29 {
- font-size: 12px;
+.upper-message__user-name_29{
+ font-size: 16px;
  color: #424A53;
- margin:35px 0 12px ;
+ margin:0 ;
  list-style: none;
  display: flex;
  justify-content: space-around;
 }
-.li.message-contents__message-date_30{
+.upper-message__date_30{
  color: #424A53;
  font-size: 12px;
- margin:35px 0 12px ;
- 
+ margin:0 0 0 10px ;
 }
-.message-contents__message-writing_32{
+.lower-message_32{
  color: #424A53;
  font-size: 14px;
  margin: 0  0 46px 40px ;     
+}
+.lower-message__content{
+  margin-bottom:10px;
 }

@@ -5,10 +5,14 @@ class Group < ApplicationRecord
 
   has_many :users, through: :group_users
    # 1/28_has_many :through関連付け多対多」を使用する時によく使われる記述
-   # 1/28_アソシエーションを設定することでgroupsテーブルとusersテーブルを関連付ける（group側から記載 user側からの記載とセット 恐らく）
+   # 1/28_アソシエーションを設定することでgroup-userテーブルとusersテーブルを関連付ける（group側から記載）
    # 1/28_has_manyの引数に「アソシエーションを組みたいテーブル名」:throughのバリューに「中間テーブル名」を指定
-   
+
+  has_many :messages
+  # 1/31 送信機能実装
+
   validates :name, presence: true, uniqueness: true
+  
   def show_last_message
    if (last_message = messages.last).present?
      if last_message.content?
@@ -20,8 +24,11 @@ class Group < ApplicationRecord
      'まだメッセージはありません。'
    end
  end
- # 1/30_11行目から追記
- # サイドバーのグループ部分に最新のメッセージが表示
- # show_last_messageメソッドでは、メッセージが投稿されている場合、されていない場合で処理を分けている
- # メッセージがないときは「まだメッセージはありません。」と表示
-end
+# 2/2_show_last_messageメソッドでは、メッセージが投稿されている場合、されていない場合で処理を分けています。
+
+
+
+
+
+ end
+

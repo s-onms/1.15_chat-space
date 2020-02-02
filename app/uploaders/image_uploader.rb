@@ -4,7 +4,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   include CarrierWave::MiniMagick
-  # 1/30_追記 Carrierwaveを導入の際
+  # 1/31_Carrierwaveを導入
+
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -49,6 +50,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   process resize_to_fit: [800, 800]
-  # 1/30_追記 Carrierwaveを導入の際
-  # resize_to_fitは縦横比を維持したまま、縦横を800px以内にリサイズするという意味
+  # 1/31_resize_to_fitは縦横比を維持したまま、縦横を800px以内にリサイズする
 end
+
