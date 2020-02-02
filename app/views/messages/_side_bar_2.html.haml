@@ -1,9 +1,6 @@
 -# 1/21 hamlファイルを作成
 -# 試し書き サイドバー→チェック済
 
--# テスト書き
--# ↑1/23普通に書くだけで表示された
-
 
 .side-bar_2
  .side-bar__header_4
@@ -18,12 +15,15 @@
     %li.header--box__button-edit_13
      = link_to edit_user_path(current_user) do
       = icon('fas', 'cog', class: 'icon')
+
  .side-main__group_6
   - current_user.groups.each do |group|
    .group_24
-    = link_to '#' do
+    = link_to group_messages_path(group) do
+     -# 2/2問5で追記
      .group__name_25
       = group.name
      .group__message_26
-      メッセージはまだありません。
+      = group.show_last_message
+      -# 2/2 これでメッセージがありません以外になる
   

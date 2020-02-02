@@ -3,10 +3,17 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title ChatSpace
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    -# = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    -# = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    -# 1/31_不要な為消す
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    -# 1.31_消しすぎてCSSが全部反映されなくなった
+    
     = csrf_meta_tags
   %body
     = render 'layouts/notifications'
     -# 1/28_フラッシュメッセージが表示される
     = yield
+
+

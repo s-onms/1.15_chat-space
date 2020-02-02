@@ -2,7 +2,7 @@
 // 下記追記（YUI 3のリセットファイルを使用）
 @import "./reset";
 @import "config/colors";
-// 1/28_訳あって先に読ませてもらいます
+// 1/28_訳あって先に読む必要がある
 
 @import "./messages";
 // ▲1/21 _messages.scssが読み込まれるよう設定
@@ -13,7 +13,6 @@
 
 @import "side_bar_2";
 @import "main_chat_3";
-@import "side_main_6";
 @import "message_contents_7";
 @import "post_1";
 // 1/23 ここは紐付けの場所
@@ -30,9 +29,10 @@
 // 1/28_「通知用」のメッセージと「アラート用」メッセージ紐付け
 // 読み込みの順番注意 先に読めておく必要がある@import "config/colors";はリセットCSSの次へ！
 
-@import "group"
+@import "group";
 // 1/29_新規登録画面のチェックボックス
 // 先に該当ファイルgroups.scssを移動（配下）しておく必要がある
+// 1/31_カリキュラムでは"modules/group";となっているが、modulesディレクトリを作ってないので問題なし。同じディレクトリ内のためファイル名だけでいい
 
 
 
