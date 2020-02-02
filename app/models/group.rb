@@ -1,5 +1,8 @@
 class Group < ApplicationRecord
   has_many :group_users
+  has_many :messages
+  # 1/30_アソシエーションを設定 gruoupからはメッセージ多数ですよって事
+
   has_many :users, through: :group_users
    # 1/28_has_many :through関連付け多対多」を使用する時によく使われる記述
    # 1/28_アソシエーションを設定することでgroup-userテーブルとusersテーブルを関連付ける（group側から記載）
@@ -9,8 +12,7 @@ class Group < ApplicationRecord
   # 1/31 送信機能実装
 
   validates :name, presence: true, uniqueness: true
-
-
+  
   def show_last_message
    if (last_message = messages.last).present?
      if last_message.content?
@@ -29,3 +31,4 @@ class Group < ApplicationRecord
 
 
  end
+

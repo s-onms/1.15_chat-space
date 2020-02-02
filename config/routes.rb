@@ -18,6 +18,12 @@ Rails.application.routes.draw do
   # resources :groups, only: [:new, :create, :edit, :update]
   # resources :groups, only: [:index, :new, :create, :edit, :update]
   # 1/29 追記→修正_「グループ」の編集機能を実装。更に追記サイドバーにグループ一覧を表示
+  resources :groups, only: [:new, :create, :edit, :update] do
+   resources :messages, only: [:index, :create]
+   # 1/30_4度目の修正
+   # 投稿されたメッセージの一覧表示 & メッセージの入力ができる:index
+   # メッセージの保存を行う:create
+  end
 
   resources :groups, only: [:new, :create, :edit, :update] do
    # ？なぜ↑のindexが要らなくなったのか？

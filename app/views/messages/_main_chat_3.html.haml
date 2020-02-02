@@ -10,11 +10,7 @@
           %span.chat-header__user #{user.name}
     .chat-header__edit-btn_19
       = link_to 'Edit', edit_group_path(@group), class: 'chat-header__edit-btn'
-
-
-
-
-         
+        
   .message
     = render @messages
 
@@ -27,8 +23,6 @@
           = f.file_field :image, class: 'hidden_4'
       = f.submit 'Send', class: 'post__submit_5'
 
-
-      
 -# .main-content
 -#   .chat-header
 -#     .chat-header--left
@@ -39,4 +33,3 @@
 -#           %span.chat-header__user #{user.name}
 -#     .chat-header--right
 -#       = link_to 'Edit', edit_chat_group_path(@chat_group), class: 'chat-header__edit-btn'
-
