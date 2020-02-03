@@ -61,3 +61,8 @@
   -#    %label.post__mask__image= icon('fa','image',class: 'icon')
   -#    %input.hidden{type: 'file'}
   -#   %input.post__submit{type: 'submit', value: 'Send'}
+
+  --------------------------------------------------------
+  ・group_controller.rb
+# 1/29_配列の保存を許可するためのストロングパラメータが必要
+  # 配列に保存を許可したい場合、キーの名称と関連づけてバリューに[]と記述
