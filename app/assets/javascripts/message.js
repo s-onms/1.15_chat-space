@@ -40,8 +40,6 @@ $(function(){
      return html;
    };
  }
-
-  
  $('#new_message').on('submit', function(e){
   e.preventDefault();
   var formData = new FormData(this);
@@ -69,8 +67,5 @@ $(function(){
       });
       // 追記
       return false;
-
-
-
  })
 });
