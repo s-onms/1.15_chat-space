@@ -39,7 +39,10 @@
  border: 1px solid #38adef;
  padding: 12px 20px;
  color:#38adef; 
- // text-decoration	:none;？？？効かない
+}
+.chat-header__edit-btn {
+text-decoration	:none;
+
 }
 .message{
  overflow: scroll;
