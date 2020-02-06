@@ -1,24 +1,22 @@
 .side-bar_2
- .side-bar__header_4
-  .side-bar__header-box_9
-   .side-bar__header-box__name_10
-    = current_user.name
-   %ul.header--box__button-list_11
-    %li.header--box__button-new_12
-     = link_to new_group_path do
-      -# 1/29_グループ編集機能で修正。クリックしたらグループの新規作成画面に遷移
-      = icon('fa', 'edit',class: 'icon',)
-    %li.header--box__button-edit_13
-     = link_to edit_user_path(current_user) do
-      = icon('fas', 'cog', class: 'icon')
+  .side-bar__header_4
+    .side-bar__header-box_9
+      .side-bar__header-box__name_10
+        = current_user.name
+      %ul.header--box__button-list_11
+        %li.header--box__button-new_12
+          = link_to new_group_path do 
+            = icon('fa', 'edit',class: 'icon',)
+        %li.header--box__button-edit_13
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
 
- .side-main__group_6
-  - current_user.groups.each do |group|
-   .group_24
-    = link_to group_messages_path(group) do
-     -# 2/2問5で追記
-     .group__name_25
-      = group.name
-     .group__message_26
-      = group.show_last_message
-      -# 2/2 これでメッセージがありません以外になる
+  .side-main__group_6
+    - current_user.groups.each do |group|
+      .group_24
+        = link_to group_messages_path(group) do
+          .group__name_25
+            = group.name
+          .group__message_26
+            = group.show_last_message
+           
