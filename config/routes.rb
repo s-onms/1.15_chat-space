@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     namespace :api do # 2/5_抜けていたので追記
       resources :messages, only: [:index, :create]
 
+      # 2/6_追記 namespace :ディレクトリ名 do ~ end
+      namespace :api do
+        resources :messages, only: :index, defaults: { format: 'json' }
+      end
+
   end
 end
 end

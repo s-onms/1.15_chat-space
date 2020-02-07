@@ -1,7 +1,13 @@
-.message {
+.messages{
  background-color: #FAFAFA;
  height: calc(100vh - 190px);
  padding: 46px 40px ;
+}
+
+.message {
+ background-color: #FAFAFA;
+ 
+ 
 }
 // .message-contents__space_27{
 //  margin-left: 40px;
@@ -27,8 +33,9 @@
 .lower-message_32{
  color: #424A53;
  font-size: 14px;
- margin: 0  0 46px 40px ;     
+ margin-bottom: 46px ;     
 }
 .lower-message__content{
   margin-bottom:10px;
+  font-size: 14px;
 }

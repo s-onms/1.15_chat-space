@@ -1,17 +1,20 @@
 
 
+.message
+  .upper-message_28
+    .upper-message__user-name_29
+      = message.user.name
+    .upper-message__date_30
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .lower-message_32
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  -# 2/1_投稿されたメッセージをビューに表示
+  -# 2/2_クラス名を自分仕様に合わせる
+  
+.message{data: {message: {id: message.id}}}
+-# 2.6 追加 自動更新
 
-.upper-message_28
-  .upper-message__user-name_29
-    = message.user.name
-  .upper-message__date_30
-    = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-.lower-message_32
-  - if message.content.present?
-    %p.lower-message__content
-      = message.content
-  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-
--# 2/1_投稿されたメッセージをビューに表示
--# 2/2_クラス名を自分仕様に合わせる
 
