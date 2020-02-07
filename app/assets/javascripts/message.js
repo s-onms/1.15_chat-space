@@ -1,17 +1,9 @@
 $(function(){ 
-  console.log('aaa');// 2/6 追記
+  console.log('aaa');
 
   var buildHTML = function(message) {
     last_message_id = $('.message:last').data("message-id");// 6行目に移動
-    if (message.content && message.image) {
-      //data-idが反映されるようにしている
-
-      // テンプレートリテラル
-      // テンプレートリテラル ` （バッククォート）が追加されました。 ` （バッククォート）を利用することで文字列を作成できる点は、他の文字列リテラルと同じ
-
-      // 文字列結合演算子（+)
-
-
+    if (message.content && message.image) {   
       var html = `<div class="message" data-message-id=${message.id} >
         <div class="upper-message-28"> 
           <div class="upper-message__user-name_29">
@@ -86,15 +78,12 @@ $(function(){
      var html = buildHTML(data);
      $('.messages').append(html);
      $('form')[0].reset();
-    //2/5_ここの設定が怪しい↓
      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-    //  $this.get(0).reset();
-    // autoScroll(); 変化無し
     })
       .fail(function() {
         alert('メッセージを送信できません');
       });
-      // 追記
+      // 連続で出来るように
       return false;
     })
     
@@ -124,11 +113,11 @@ $(function(){
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       }
     })
-    .fail(function() {
-      console.log('error');
-    });
+    // .fail(function() {
+    //   console.log('error');
+    // });
   };
-  // ここでいいか？→OK $(function(){});の閉じタグの直上(処理の最後)に以下のように追記
+  // $(function(){});の閉じタグの直上(処理の最後)に以下のように追記
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
   setInterval(reloadMessages, 7000);
   }

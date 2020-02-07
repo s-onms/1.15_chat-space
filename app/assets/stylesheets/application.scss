@@ -1,38 +1,33 @@
-// 1/21 拡張子をscssに変更
-// 下記追記（YUI 3のリセットファイルを使用）
+// 拡張子をscssに変更
+// YUI 3のリセットファイル使用
 @import "./reset";
 @import "config/colors";
-// 1/28_訳あって先に読む必要がある
+// 先に読む必要がある
 
 @import "./messages";
-// ▲1/21 _messages.scssが読み込まれるよう設定
+// ▲_messages.scssが読み込まれるよう設定
 
 @import "font-awesome-sprockets";
 @import "./font-awesome";
-// 1/21 FontAwesomeを導入
+//FontAwesomeを導入
 
 @import "side_bar_2";
 @import "main_chat_3";
 @import "message_contents_7";
 @import "post_1";
-// 1/23 ここは紐付けの場所
-
-// deviese用のスタイリング
-// 1/26 deviseのビューファイルの設定
-// @import "modules/user"; 記載したらエラーになった
 
 @import "user";
-// 1/28要は紐付けたいscssのファイル名を書くってこと
+// 紐付けたいscssのファイル名を書く
 // 今回はダウンロードしたchatspace-materialsフォルダ内にusersフォルダがあって、その中に「user.scss」ファイルがあるのでこれ！
 
 @import "modules/flash";
-// 1/28_「通知用」のメッセージと「アラート用」メッセージ紐付け
-// 読み込みの順番注意 先に読めておく必要がある@import "config/colors";はリセットCSSの次へ！
+// 「通知用」のメッセージと「アラート用」メッセージ紐付け
+// 読み込みの順番注意 先に読めておく必要がある@import "config/colors";はリセットCSSの次へ
 
 @import "group";
-// 1/29_新規登録画面のチェックボックス
+// 新規登録画面のチェックボックス
 // 先に該当ファイルgroups.scssを移動（配下）しておく必要がある
-// 1/31_カリキュラムでは"modules/group";となっているが、modulesディレクトリを作ってないので問題なし。同じディレクトリ内のためファイル名だけでいい
+// カリキュラムでは"modules/group";となっているが、modulesディレクトリを作ってないので問題なし。同じディレクトリ内のためファイル名だけでいい
 
 
 

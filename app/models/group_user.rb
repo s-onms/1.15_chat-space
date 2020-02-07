@@ -1,5 +1,5 @@
 class GroupUser < ApplicationRecord
- belongs_to :group
- belongs_to :user
- # 1/28_アソシエーションを設定
+  belongs_to :group
+  belongs_to :user
+  # アソシエーション設定
 end

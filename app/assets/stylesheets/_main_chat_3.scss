@@ -1,51 +1,49 @@
 .main_chat_3 {
- width: calc(100% - 300px);
- background-color: #1a1d21;
- margin: 0;
+  width: calc(100% - 300px);
+  background-color: #1a1d21;
+  margin: 0;
 }
 .main_chat__main-header_5 {
- height: 100px;
- background-color:#ffffff;
- border-bottom: 1px solid #595959;
- /* 追加分 */
- display :flex ;
- padding :0 40px ; 
- align-items : center ;
- justify-content: space-between ; 
+  height: 100px;
+  background-color:#ffffff;
+  border-bottom: 1px solid #595959;
+  display :flex ;
+  padding :0 40px ; 
+  align-items : center ;
+  justify-content: space-between ; 
 }
 .main_chat__main-header__leftbox_14_0 {
- margin-top: 20px;
+  margin-top:20px;
 }
 .main_chat__main-header__current-group_14 {
- /* background-color: white; */
- margin-bottom: 15px;
- font-size: 20px;
- color: #424A53;
- h2{
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #424A53;
+  h2{
   color:#333333;
   font-size: 20px ;
- }
+  }
 }
 .main_chat__main-header__member-list_15{
- font-size: 12px;
- color: #999999;
- display: flex;
- list-style: none;
+  font-size: 12px;
+  color: #999999;
+  display: flex;
+  list-style: none;
 }
 // リスト３人は同じスタイルになるのでまとめる
 .chat-header__user{
- display: flex;
- margin-left: 4.8px;
+  display: flex;
+  margin-left: 4.8px;
 }
 .chat-header__edit-btn_19 {
- font-size: 16px;
- border: 1px solid #38adef;
- padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #38adef;
+  padding: 12px 20px;
 }
 .chat-header__edit-btn {
-color:#38adef; 
-text-decoration	:none;
+  color:#38adef; 
+  text-decoration	:none;
 }
 .messages{
- overflow: scroll;
+  overflow: scroll;
 }
