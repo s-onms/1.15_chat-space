@@ -5,59 +5,69 @@ $(function(){
     last_message_id = $('.message:last').data("message-id");// 6行目に移動
     if (message.content && message.image) {
       //data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message-28">` +
-          `<div class="upper-message__user-name_29">` +
-            message.user_name +
-          `</div>` +
-          `<div class="upper-message__date_30">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="lower-message_32">` +
-          `<p class="lower-message__content">` +
-            message.content +
-          `</p>` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+
+      // テンプレートリテラル
+      // テンプレートリテラル ` （バッククォート）が追加されました。 ` （バッククォート）を利用することで文字列を作成できる点は、他の文字列リテラルと同じ
+
+      // 文字列結合演算子（+)
+
+
+      var html = `<div class="message" data-message-id=${message.id} >
+        <div class="upper-message-28"> 
+          <div class="upper-message__user-name_29">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date_30">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message_32">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+          <img src="message.image" class="lower-message__image" >
+        </div>
+      </div>
+      `
+
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message_28">` +
-          `<div class="upper-message__user-name_29">` +
-            message.user_name +
-          `</div>` +
-          `<div class="upper-message__date_30">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="lower-message_32">` +
-          `<p class="lower-message__content">` +
-            message.content +
-          `</p>` +
-        `</div>` +
-      `</div>`
+      var html = `<div class="message" data-message-id=${message.id}>
+        <div class="upper-message_28">
+          <div class="upper-message__user-name_29">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date_30">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message_32">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+        </div>
+      </div>
+      `
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
-      var html = `<div class="message" data-message-id=` + message.id + `>` +
-        `<div class="upper-message">` +
-          `<div class="upper-message__user-name">` +
-            message.user_name +
-          `</div>` +
-          `<div class="upper-message__date">` +
-            message.created_at +
-          `</div>` +
-        `</div>` +
-        `<div class="lower-message">` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+      var html = `<div class="message" data-message-id=${message.id}>
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message">
+          <img src="message.image" class="lower-message__image>
+        </div>
+      </div>
+      `
     };
     return html;
   };  
 
-  
  $('#new_message').on('submit', function(e){
   e.preventDefault();
   var formData = new FormData(this);
@@ -101,7 +111,6 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log(messages);
       if (messages.length !== 0) {
         //追加するHTMLの入れ物を作る
         var insertHTML = '';
@@ -109,8 +118,6 @@ $(function(){
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
         });
-        // binding.pry
-        console.log(messages); 
 
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.messages').append(insertHTML);
