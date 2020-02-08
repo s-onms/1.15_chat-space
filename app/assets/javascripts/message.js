@@ -1,6 +1,4 @@
 $(function(){ 
-  console.log('aaa');
-
   var buildHTML = function(message) {
     last_message_id = $('.message:last').data("message-id");// 6行目に移動
     if (message.content && message.image) {   
@@ -113,9 +111,9 @@ $(function(){
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       }
     })
-    // .fail(function() {
-    //   console.log('error');
-    // });
+    .fail(function() {
+      console.log('error');
+    });
   };
   // $(function(){});の閉じタグの直上(処理の最後)に以下のように追記
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
