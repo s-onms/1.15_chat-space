@@ -1,25 +1,3 @@
-// 2/5 インクリメンタルサーチ用に追加でファイル作成
-// $(function() {
-//   $("#user-search-field").on("keyup", function() {
-//     let input = $("#user-search-field").val();
-//     console.log(input)// これ抜けていたらコンソールで確認出来ない
-//     $.ajax({
-//       type: "GET",//HTTPメソッド
-//       url: "/users",//users_controllerの、indexアクションにリクエストの送信先を設定する
-//       data: { keyword: input },
-//       dataType: "json"//テキストフィールドに入力された文字を設定する
-//     })
-
-//       .done(function(users) {
-//         console.log("成功です");// console.logを仮置き
-//       })
-//       .fail(function() {
-//         console.log("失敗です");// console.logを仮置き
-//       });
-//   });
-// });
-
-
 $(function() {
   function addUser(user) {
     let html = `

@@ -58,11 +58,11 @@ gem 'haml-rails'
 gem 'font-awesome-sass'
 #1/21 FontAwesomeを導入。文字を扱うのと同じようにアイコンを表示
 
-# 1/26 ユーザー管理機能実装時に作成
- gem 'devise'
+gem 'devise'
+# ユーザー管理機能実装時に作成
 
- 
- gem 'carrierwave' 
- gem 'mini_magick'
- # 1/31 Carrierwaveを導入
- gem 'pry'
+
+gem 'carrierwave' 
+gem 'mini_magick'
+# Carrierwave導入
+gem 'pry'

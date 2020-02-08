@@ -1,18 +1,17 @@
 .post_1 {
- background-color: #DDDDDD;
- height: 90px;
- padding: 20px 40px;
- box-sizing: border-box;
- display: flex;
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  display: flex;
 }
 .form__mask {
- position: relative;
- // width: 100%;
+  position: relative;
 }
 .new_message{
- width:100%;
- display: flex;
- justify-content: space-between;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
 }
 .post__message_2 {
   width: 100%;
@@ -22,24 +21,23 @@
   border-style: none;
 }
 .post__mask__image_3 {
- // line-height: 50px;
- font-size: 1.3rem;
- position: absolute;
- top: 10px;
- right: 10px;
- cursor: pointer;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 .hidden_4{
- display: none;
+  display: none;
 }
 .post__submit_5{
- background-color:#38aef0;
- border: none;
- color: #ffffff;
- float: right;
- font-size: 16px;
- height: 50px;
- margin-left: 15px;
- padding: 0 30px;
- cursor: pointer;
+  background-color:#38aef0;
+  border: none;
+  color: #ffffff;
+  float: right;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 30px;
+  cursor: pointer;
 }
