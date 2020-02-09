@@ -61,6 +61,10 @@ gem 'font-awesome-sass'
 gem 'devise'
 # ユーザー管理機能実装時に作成
 
+group :production do
+  gem 'unicorn', '5.4.1'
+end
+# Unicorn導入
 
 gem 'carrierwave' 
 gem 'mini_magick'
