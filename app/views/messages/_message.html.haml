@@ -8,9 +8,9 @@
     - if message.content.present?
       %p.lower-message__content
         = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-    -# 2/1_投稿されたメッセージをビューに表示
-    -# 2/2_クラス名を自分仕様に合わせる
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+      -# 2/1_投稿されたメッセージをビューに表示
+      -# 2/2_クラス名を自分仕様に合わせる
   
 .message{data: {message: {id: message.id}}}
 -# 2.6 追加 自動更新
