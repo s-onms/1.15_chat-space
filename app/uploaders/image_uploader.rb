@@ -8,8 +8,10 @@ class ImageUploader < CarrierWave::Uploader::Base
 
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+  # storage :file
+  storage :fog
+
+  
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -52,4 +54,5 @@ class ImageUploader < CarrierWave::Uploader::Base
   process resize_to_fit: [800, 800]
   # 1/31_resize_to_fitは縦横比を維持したまま、縦横を800px以内にリサイズする
 end
+
 

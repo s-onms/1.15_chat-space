@@ -56,7 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 
 gem 'font-awesome-sass'
-#1/21 FontAwesomeを導入。文字を扱うのと同じようにアイコンを表示
+#FontAwesomeを導入。文字を扱うのと同じようにアイコンを表示
 
 gem 'devise'
 # ユーザー管理機能実装時に作成
@@ -67,6 +67,8 @@ end
 # Unicorn導入
 
 gem 'carrierwave' 
+gem 'fog-aws'
+# 画像をアップロードする際、外部のストレージを選択しアップロードするのを補助
 gem 'mini_magick'
 # Carrierwave導入
 gem 'pry'
