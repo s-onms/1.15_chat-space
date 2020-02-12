@@ -19,6 +19,7 @@ $(function(){
         </div>
       </div>
       `
+      return html;
 
     } else if (message.content) {
       //同様に、data-idが反映されるようにしている
@@ -38,6 +39,7 @@ $(function(){
         </div>
       </div>
       `
+      return html;
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
       var html = `<div class="message" data-message-id=${message.id}>
@@ -54,9 +56,9 @@ $(function(){
         </div>
       </div>
       `
+      return html;
     };
-    return html;
-  };  
+     };  
 
  $('#new_message').on('submit', function(e){
   e.preventDefault();
