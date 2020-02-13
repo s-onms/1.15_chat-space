@@ -46,6 +46,7 @@
       color: #fff;
       background-color: #ccc;
       font-size: 14px;
+      text-decoration: none;
     }
   }
 
@@ -139,4 +140,8 @@
     padding: 0;
     font-size: 13px;
   }
+}
+.account-page__inner.clearfix{
+  display: flex;
+  justify-content: space-between;
 }
