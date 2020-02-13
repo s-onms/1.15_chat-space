@@ -3,7 +3,7 @@ $(function(){
     last_message_id = $('.message:last').data("message-id");// 6行目に移動
     if (message.content && message.image) {   
       var html = `<div class="message" data-message-id=${message.id} >
-        <div class="upper-message-28"> 
+        <div class="upper-message_28"> 
           <div class="upper-message__user-name_29">
             ${message.user_name}
           </div>
