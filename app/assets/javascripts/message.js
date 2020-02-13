@@ -43,15 +43,15 @@ $(function(){
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
       var html = `<div class="message" data-message-id=${message.id}>
-        <div class="upper-message">
-          <div class="upper-message__user-name">
+        <div class="upper-message_28">
+          <div class="upper-message__user-name_29">
             ${message.user_name}
           </div>
-          <div class="upper-message__date">
+          <div class="upper-message__date_30">
             ${message.created_at}
           </div>
         </div>
-        <div class="lower-message">
+        <div class="lower-message_32">
           <img src=${message.image} class="lower-message__image">
         </div>
       </div>
